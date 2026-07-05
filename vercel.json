@@ -1,6 +1,16 @@
 {
+  "rewrites": [
+    {
+      "source": "/api/weather",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/",
+      "destination": "/api/index.py"
+    }
+  ],
   "functions": {
-    "api/weather.py": {
+    "api/index.py": {
       "maxDuration": 30
     }
   }

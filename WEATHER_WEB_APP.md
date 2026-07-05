@@ -3,7 +3,7 @@
 이 프로젝트는 Flask로 만든 날씨 API와 정적 웹 페이지로 구성되어 있습니다.
 
 - 로컬 Flask 앱: `app.py`
-- Vercel Flask 서버리스 API: `api/weather.py`
+- Vercel Flask 서버리스 앱: `api/index.py`
 - 화면: `public/index.html`
 - 공통 날씨/그래프 로직: `weather_service.py`
 - Open-Meteo 호출 코드: `weather_hourly.py`
@@ -84,4 +84,4 @@ vercel --prod
 
 ## 참고
 
-Open-Meteo API를 호출하므로 로컬 실행과 배포 환경 모두 인터넷 연결이 필요합니다. Vercel 서버리스 환경에서는 Matplotlib 캐시 위치를 `/tmp/matplotlib`로 설정합니다.
+Open-Meteo API를 호출하므로 로컬 실행과 배포 환경 모두 인터넷 연결이 필요합니다. Vercel에서는 `vercel.json`의 rewrite 설정으로 `/`와 `/api/weather`를 모두 Flask 서버리스 앱인 `api/index.py`로 연결합니다. 서버리스 환경에서는 Matplotlib 캐시 위치를 `/tmp/matplotlib`로 설정합니다.
