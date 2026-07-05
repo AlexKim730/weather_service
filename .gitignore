@@ -1,0 +1,5 @@
+.matplotlib-cache/
+__pycache__/
+*.pyc
+today_temperature.png
+.vercel/
